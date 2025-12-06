@@ -34,7 +34,7 @@ Microsoft nos Estados Unidos e/ou em outros países.
 As licenças para este projeto não lhe concedem o direito de usar quaisquer
 nomes, logotipos ou marcas comerciais da Microsoft.
 As diretrizes gerais de marcas comerciais da Microsoft podem ser encontradas em
-http://go.microsoft.com/fwlink/?LinkID=254653.
+https://go.microsoft.com/fwlink/?LinkID=254653.
 
 Documentação licenciada sob a
 [Licença Creative Commons Atribuição 4.0 Internacional][license].<br/>
@@ -58,7 +58,7 @@ A obra original foi traduzida do inglês para o português brasileiro.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license]: LICENSE.md
+[license]: LICENSE
 
 [page]: https://pt.docs.dev.br/tech/v/typescript/
 

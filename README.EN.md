@@ -34,7 +34,7 @@ trademarks of Microsoft in the United States and/or other countries.
 The licenses for this project do not grant you rights to use any Microsoft
 names, logos, or trademarks.
 Microsoft's general trademark guidelines can be found at
-http://go.microsoft.com/fwlink/?LinkID=254653.
+https://go.microsoft.com/fwlink/?LinkID=254653.
 
 Documentation licensed under the
 [Creative Commons Attribution 4.0 International License][license].<br/>
@@ -58,7 +58,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license]: LICENSE.md
+[license]: LICENSE
 
 [page]: https://pt.docs.dev.br/tech/v/typescript/
 
