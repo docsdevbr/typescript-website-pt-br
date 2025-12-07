@@ -1,4 +1,19 @@
 ---
+# Copyright (c) Microsoft Corporation.
+# Microsoft, Windows, Microsoft Azure and/or other Microsoft products and
+# services referenced in the documentation may be either trademarks or
+# registered trademarks of Microsoft in the United States and/or other
+# countries.
+# The licenses for this project do not grant you rights to use any Microsoft
+# names, logos, or trademarks.
+# Microsoft's general trademark guidelines can be found at
+# https://go.microsoft.com/fwlink/?LinkID=254653.
+#
+# Documentation licensed under the Creative Commons Attribution 4.0
+# International License.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
+
 title: Introduction
 layout: docs
 permalink: /docs/handbook/declaration-files/introduction.html
@@ -10,7 +25,7 @@ The Declaration Files section is designed to teach you how to write a high-quali
 If you haven't already, you should read the [TypeScript Handbook](/docs/handbook/2/basic-types.html)
 to familiarize yourself with basic concepts, especially types and modules.
 
-The most common case for learning how .d.ts files work is that you're typing an npm package with no types. 
+The most common case for learning how .d.ts files work is that you're typing an npm package with no types.
 In that case, you can jump straight to [Modules .d.ts](/docs/handbook/declaration-files/templates/module-d-ts.html).
 
 The Declaration Files section is broken down into the following sections.
@@ -25,7 +40,7 @@ This guide is aimed at the TypeScript novice who may not yet be familiar with ev
 
 The [Library Structures](/docs/handbook/declaration-files/library-structures.html) guide helps you understand common library formats and how to write a proper declaration file for each format.
 If you're editing an existing file, you probably don't need to read this section.
-Authors of new declaration files are strongly encouraged to read this section to properly understand how the format of the library influences the writing of the declaration file. 
+Authors of new declaration files are strongly encouraged to read this section to properly understand how the format of the library influences the writing of the declaration file.
 
 In the Template section you'll find a number of declaration files that serve as a useful starting point
 when writing a new file. If you already know what your structure is, see the d.ts Template section in the sidebar.
@@ -33,15 +48,15 @@ when writing a new file. If you already know what your structure is, see the d.t
 ## [Do's and Don'ts](/docs/handbook/declaration-files/do-s-and-don-ts.html)
 
 Many common mistakes in declaration files can be easily avoided.
-The [Do's and Don'ts](/docs/handbook/declaration-files/do-s-and-don-ts.html) section identifies common errors, 
-describes how to detect them, 
+The [Do's and Don'ts](/docs/handbook/declaration-files/do-s-and-don-ts.html) section identifies common errors,
+describes how to detect them,
 and how to fix them.
 Everyone should read this section to help themselves avoid common mistakes.
 
 ## [Deep Dive](/docs/handbook/declaration-files/deep-dive.html)
 
-For seasoned authors interested in the underlying mechanics of how declaration files work, 
-the [Deep Dive](/docs/handbook/declaration-files/deep-dive.html) section explains many advanced concepts in declaration writing, 
+For seasoned authors interested in the underlying mechanics of how declaration files work,
+the [Deep Dive](/docs/handbook/declaration-files/deep-dive.html) section explains many advanced concepts in declaration writing,
 and shows how to leverage these concepts to create cleaner and more intuitive declaration files.
 
 ## [Publish to npm](/docs/handbook/declaration-files/publishing.html)

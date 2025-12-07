@@ -1,4 +1,19 @@
 ---
+# Copyright (c) Microsoft Corporation.
+# Microsoft, Windows, Microsoft Azure and/or other Microsoft products and
+# services referenced in the documentation may be either trademarks or
+# registered trademarks of Microsoft in the United States and/or other
+# countries.
+# The licenses for this project do not grant you rights to use any Microsoft
+# names, logos, or trademarks.
+# Microsoft's general trademark guidelines can be found at
+# https://go.microsoft.com/fwlink/?LinkID=254653.
+#
+# Documentation licensed under the Creative Commons Attribution 4.0
+# International License.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
+
 title: Variable Declaration
 layout: docs
 permalink: /docs/handbook/variable-declarations.html
@@ -707,7 +722,7 @@ That feature is expected in future versions of the language.
 
 ## `using` declarations
 
-`using` declarations are an upcoming feature for JavaScript that are part of the 
+`using` declarations are an upcoming feature for JavaScript that are part of the
 [Stage 3 Explicit Resource Management](https://github.com/tc39/proposal-explicit-resource-management) proposal. A
 `using` declaration is much like a `const` declaration, except that it couples the _lifetime_ of the value bound to the
 declaration with the _scope_ of the variable.
@@ -907,7 +922,7 @@ The `await` keyword that is part of the `await using` declaration only indicates
 
 ### `await using` and `return`
 
-It's important to note that there is a small caveat with this behavior if you are using an `await using` declaration in 
+It's important to note that there is a small caveat with this behavior if you are using an `await using` declaration in
 an `async` function that returns a `Promise` without first `await`-ing it:
 
 ```ts

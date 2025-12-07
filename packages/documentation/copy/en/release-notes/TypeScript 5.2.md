@@ -1,4 +1,19 @@
 ---
+# Copyright (c) Microsoft Corporation.
+# Microsoft, Windows, Microsoft Azure and/or other Microsoft products and
+# services referenced in the documentation may be either trademarks or
+# registered trademarks of Microsoft in the United States and/or other
+# countries.
+# The licenses for this project do not grant you rights to use any Microsoft
+# names, logos, or trademarks.
+# Microsoft's general trademark guidelines can be found at
+# https://go.microsoft.com/fwlink/?LinkID=254653.
+#
+# Documentation licensed under the Creative Commons Attribution 4.0
+# International License.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
+
 title: TypeScript 5.2
 layout: docs
 permalink: /docs/handbook/release-notes/typescript-5-2.html
@@ -363,7 +378,7 @@ function doSomeWork() {
 ```
 
 Here, the `defer()` method just takes a callback, and that callback will be run once `cleanup` is disposed of.
-Typically, `defer` (and other `DisposableStack` methods like `use` and `adopt`) 
+Typically, `defer` (and other `DisposableStack` methods like `use` and `adopt`)
 should be called immediately after creating a resource.
 As the name suggests, `DisposableStack` disposes of everything it keeps track of like a stack, in a first-in-last-out order, so `defer`ing immediately after creating a value helps avoid odd dependency issues.
 `AsyncDisposableStack` works similarly, but can keep track of `async` functions and `AsyncDisposable`s, and is itself an `AsyncDisposable.`
@@ -757,11 +772,11 @@ This reduced the time spent on a reported test case that used the [drizzle](http
 Benchmark 1: old
   Time (mean ± σ):      3.115 s ±  0.067 s    [User: 4.403 s, System: 0.124 s]
   Range (min … max):    3.018 s …  3.196 s    10 runs
- 
+
 Benchmark 2: new
   Time (mean ± σ):      2.072 s ±  0.050 s    [User: 3.355 s, System: 0.135 s]
   Range (min … max):    1.985 s …  2.150 s    10 runs
- 
+
 Summary
   'new' ran
     1.50 ± 0.05 times faster than 'old'

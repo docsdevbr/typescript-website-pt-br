@@ -1,4 +1,19 @@
 ---
+# Copyright (c) Microsoft Corporation.
+# Microsoft, Windows, Microsoft Azure and/or other Microsoft products and
+# services referenced in the documentation may be either trademarks or
+# registered trademarks of Microsoft in the United States and/or other
+# countries.
+# The licenses for this project do not grant you rights to use any Microsoft
+# names, logos, or trademarks.
+# Microsoft's general trademark guidelines can be found at
+# https://go.microsoft.com/fwlink/?LinkID=254653.
+#
+# Documentation licensed under the Creative Commons Attribution 4.0
+# International License.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
+
 title: TypeScript 4.5
 layout: docs
 permalink: /docs/handbook/release-notes/typescript-4-5.html
@@ -396,7 +411,7 @@ can be rewritten as the following `@typedef` declaration in JavaScript:
  * @typedef {{ prop: T }} Foo
  */
  ```
- 
+
 For more information, see [the pull request for const assertions](https://github.com/microsoft/TypeScript/pull/45464) along with [the changes for type argument defaults](https://github.com/microsoft/TypeScript/pull/45483).
 
 ## Faster Load Time with `realPathSync.native`

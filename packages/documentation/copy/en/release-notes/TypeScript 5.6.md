@@ -1,4 +1,19 @@
 ---
+# Copyright (c) Microsoft Corporation.
+# Microsoft, Windows, Microsoft Azure and/or other Microsoft products and
+# services referenced in the documentation may be either trademarks or
+# registered trademarks of Microsoft in the United States and/or other
+# countries.
+# The licenses for this project do not grant you rights to use any Microsoft
+# names, logos, or trademarks.
+# Microsoft's general trademark guidelines can be found at
+# https://go.microsoft.com/fwlink/?LinkID=254653.
+#
+# Documentation licensed under the Creative Commons Attribution 4.0
+# International License.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
+
 title: TypeScript 5.6
 layout: docs
 permalink: /docs/handbook/release-notes/typescript-5-6.html
@@ -428,7 +443,7 @@ This should be much faster than a full type-check.
 Internally, `transpileModule` and `transpileDeclaration` already used `noCheck` to speed things up (at least as of TypeScript 5.5).
 Now any build tool should be able to leverage the flag, taking a variety of custom strategies to coordinate and speed up builds.
 
-For more information, see [the work done in TypeScript 5.5 to power up `noCheck` internally](https://github.com/microsoft/TypeScript/pull/58364), along with the relevant work to make it publicly available [on the command line](https://github.com/microsoft/TypeScript/pull/58839) and 
+For more information, see [the work done in TypeScript 5.5 to power up `noCheck` internally](https://github.com/microsoft/TypeScript/pull/58364), along with the relevant work to make it publicly available [on the command line](https://github.com/microsoft/TypeScript/pull/58839) and
 
 ## Allow `--build` with Intermediate Errors
 

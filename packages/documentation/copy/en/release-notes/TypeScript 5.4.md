@@ -1,4 +1,19 @@
 ---
+# Copyright (c) Microsoft Corporation.
+# Microsoft, Windows, Microsoft Azure and/or other Microsoft products and
+# services referenced in the documentation may be either trademarks or
+# registered trademarks of Microsoft in the United States and/or other
+# countries.
+# The licenses for this project do not grant you rights to use any Microsoft
+# names, logos, or trademarks.
+# Microsoft's general trademark guidelines can be found at
+# https://go.microsoft.com/fwlink/?LinkID=254653.
+#
+# Documentation licensed under the Creative Commons Attribution 4.0
+# International License.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
+
 title: TypeScript 5.4
 layout: docs
 permalink: /docs/handbook/release-notes/typescript-5-4.html
@@ -289,7 +304,7 @@ For more information, you can [read up on these new settings here](https://githu
 ## Checked Import Attributes and Assertions
 
 Import attributes and assertions are now checked against the global `ImportAttributes` type.
-This means that runtimes can now more accurately describe the import attributes 
+This means that runtimes can now more accurately describe the import attributes
 
 ```ts
 // In some global file.
@@ -339,7 +354,7 @@ TypeScript 5.0 deprecated the following options and behaviors:
  * implicitly OS-specific `newLine`
 
  To continue using them, developers using TypeScript 5.0 and other more recent versions have had to specify a new option called `ignoreDeprecations` with the value `"5.0"`.
- 
+
  However, TypScript 5.4 will be the last version in which these will continue to function as normal.
  By TypeScript 5.5 (likely June 2024), these will become hard errors, and code using them will need to be migrated away.
 
@@ -413,7 +428,7 @@ TypeScript now more accurately checks whether or not strings are assignable to t
 ```ts
 function a<T extends {id: string}>() {
     let x: `-${keyof T & string}`;
-    
+
     // Used to error, now doesn't.
     x = "-id";
 }

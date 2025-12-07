@@ -1,4 +1,19 @@
 ---
+# Copyright (c) Microsoft Corporation.
+# Microsoft, Windows, Microsoft Azure and/or other Microsoft products and
+# services referenced in the documentation may be either trademarks or
+# registered trademarks of Microsoft in the United States and/or other
+# countries.
+# The licenses for this project do not grant you rights to use any Microsoft
+# names, logos, or trademarks.
+# Microsoft's general trademark guidelines can be found at
+# https://go.microsoft.com/fwlink/?LinkID=254653.
+#
+# Documentation licensed under the Creative Commons Attribution 4.0
+# International License.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
+
 title: Utility Types
 layout: docs
 permalink: /docs/handbook/utility-types.html
@@ -38,7 +53,7 @@ type C = Awaited<boolean | Promise<number>>;
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.1](/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick)
 
 </blockquote>
@@ -71,7 +86,7 @@ const todo2 = updateTodo(todo1, {
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.8](/docs/handbook/release-notes/typescript-2-8.html#improved-control-over-mapped-type-modifiers)
 
 </blockquote>
@@ -96,7 +111,7 @@ const obj2: Required<Props> = { a: 5 };
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.1](/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick)
 
 </blockquote>
@@ -130,7 +145,7 @@ function freeze<Type>(obj: Type): Readonly<Type>;
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.1](/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick)
 
 </blockquote>
@@ -161,7 +176,7 @@ cats.boris;
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.1](/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick)
 
 </blockquote>
@@ -192,7 +207,7 @@ todo;
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [3.5](/docs/handbook/release-notes/typescript-3-5.html#the-omit-helper-type)
 
 </blockquote>
@@ -235,7 +250,7 @@ todoInfo;
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.8](/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types)
 
 </blockquote>
@@ -265,7 +280,7 @@ type T3 = Exclude<Shape, { kind: "circle" }>
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.8](/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types)
 
 </blockquote>
@@ -293,7 +308,7 @@ type T2 = Extract<Shape, { kind: "circle" }>
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.8](/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types)
 
 </blockquote>
@@ -313,7 +328,7 @@ type T1 = NonNullable<string[] | null | undefined>;
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [3.1](https://github.com/microsoft/TypeScript/pull/26243)
 
 </blockquote>
@@ -350,7 +365,7 @@ type T7 = Parameters<Function>;
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [3.1](https://github.com/microsoft/TypeScript/pull/26243)
 
 </blockquote>
@@ -384,7 +399,7 @@ type T5 = ConstructorParameters<Function>;
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.8](/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types)
 
 </blockquote>
@@ -423,7 +438,7 @@ type T8 = ReturnType<Function>;
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.8](/docs/handbook/release-notes/typescript-2-8.html#predefined-conditional-types)
 
 </blockquote>
@@ -456,7 +471,7 @@ type T4 = InstanceType<Function>;
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [5.4](/docs/handbook/release-notes/typescript-5-4.html#the-noinfer-utility-type)
 
 </blockquote>
@@ -482,7 +497,7 @@ createStreetLight(["red", "yellow", "green"], "blue");  // Error
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [3.3](https://github.com/microsoft/TypeScript/pull/28920)
 
 </blockquote>
@@ -505,7 +520,7 @@ function numberToString(n: ThisParameterType<typeof toHex>) {
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [3.3](https://github.com/microsoft/TypeScript/pull/28920)
 
 </blockquote>
@@ -528,7 +543,7 @@ console.log(fiveToHex());
 
 <blockquote class=bg-reading>
 
-Released:  
+Released:
 [2.3](https://github.com/microsoft/TypeScript/pull/14141)
 
 </blockquote>

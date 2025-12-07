@@ -1,4 +1,19 @@
 ---
+# Copyright (c) Microsoft Corporation.
+# Microsoft, Windows, Microsoft Azure and/or other Microsoft products and
+# services referenced in the documentation may be either trademarks or
+# registered trademarks of Microsoft in the United States and/or other
+# countries.
+# The licenses for this project do not grant you rights to use any Microsoft
+# names, logos, or trademarks.
+# Microsoft's general trademark guidelines can be found at
+# https://go.microsoft.com/fwlink/?LinkID=254653.
+#
+# Documentation licensed under the Creative Commons Attribution 4.0
+# International License.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
+
 title: TypeScript 5.7
 layout: docs
 permalink: /docs/handbook/release-notes/typescript-5-7.html
@@ -51,7 +66,7 @@ While TypeScript 5.7 is still lenient on variables that have *possibly* been ini
 ```ts
 function foo() {
     let result: number
-    
+
     // do work, but forget to assign to 'result'
 
     function printResult() {
@@ -397,11 +412,11 @@ In some of our own testing, we've witnessed about a 2.5x speed-up in running `ts
 Benchmark 1: node ./built/local/_tsc.js --version (*without* caching)
   Time (mean ± σ):     122.2 ms ±   1.5 ms    [User: 101.7 ms, System: 13.0 ms]
   Range (min … max):   119.3 ms … 132.3 ms    200 runs
- 
+
 Benchmark 2: node ./built/local/tsc.js --version  (*with* caching)
   Time (mean ± σ):      48.4 ms ±   1.0 ms    [User: 34.0 ms, System: 11.1 ms]
   Range (min … max):    45.7 ms …  52.8 ms    200 runs
- 
+
 Summary
   node ./built/local/tsc.js --version ran
     2.52 ± 0.06 times faster than node ./built/local/_tsc.js --version

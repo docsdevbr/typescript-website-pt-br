@@ -1,4 +1,19 @@
 ---
+# Copyright (c) Microsoft Corporation.
+# Microsoft, Windows, Microsoft Azure and/or other Microsoft products and
+# services referenced in the documentation may be either trademarks or
+# registered trademarks of Microsoft in the United States and/or other
+# countries.
+# The licenses for this project do not grant you rights to use any Microsoft
+# names, logos, or trademarks.
+# Microsoft's general trademark guidelines can be found at
+# https://go.microsoft.com/fwlink/?LinkID=254653.
+#
+# Documentation licensed under the Creative Commons Attribution 4.0
+# International License.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
+
 title: TypeScript 4.9
 layout: docs
 permalink: /docs/handbook/release-notes/typescript-4-9.html
@@ -107,7 +122,7 @@ We'd like to thank [Oleksandr Tarasiuk](https://github.com/a-tarasyuk) who imple
 
 As developers, we often need to deal with values that aren't fully known at runtime.
 In fact, we often don't know if properties exist, whether we're getting a response from a server or reading a configuration file.
-JavaScript's `in` operator can check whether a property 
+JavaScript's `in` operator can check whether a property
 exists on an object.
 
 Previously, TypeScript allowed us to narrow away any types that don't explicitly list a property.
@@ -430,7 +445,7 @@ You can read up more on these optimizations on their respective pull requests:
 While TypeScript strives to avoid major breaks, even small changes in the built-in libraries can cause issues.
 We don't expect major breaks as a result of DOM and `lib.d.ts` updates, but there may be some small ones.
 
-### Better Types for `Promise.resolve` 
+### Better Types for `Promise.resolve`
 
 `Promise.resolve` now uses the `Awaited` type to unwrap Promise-like types passed to it.
 This means that it more often returns the right `Promise` type, but that improved type can break existing code if it was expecting `any` or `unknown` instead of a `Promise`.

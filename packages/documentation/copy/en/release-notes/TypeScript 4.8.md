@@ -1,4 +1,19 @@
 ---
+# Copyright (c) Microsoft Corporation.
+# Microsoft, Windows, Microsoft Azure and/or other Microsoft products and
+# services referenced in the documentation may be either trademarks or
+# registered trademarks of Microsoft in the United States and/or other
+# countries.
+# The licenses for this project do not grant you rights to use any Microsoft
+# names, logos, or trademarks.
+# Microsoft's general trademark guidelines can be found at
+# https://go.microsoft.com/fwlink/?LinkID=254653.
+#
+# Documentation licensed under the Creative Commons Attribution 4.0
+# International License.
+# The original work was translated from English into Brazilian Portuguese.
+# https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
+
 title: TypeScript 4.8
 layout: docs
 permalink: /docs/handbook/release-notes/typescript-4-8.html
@@ -116,7 +131,7 @@ If it doesn't see that the string can be "round-tripped", then it will fall back
 
 ```ts
 // JustNumber is `number` here because TypeScript parses out `"1.0"`, but `String(Number("1.0"))` is `"1"` and doesn't match.
-type JustNumber = "1.0" extends `${infer T extends number}` ? T : never; 
+type JustNumber = "1.0" extends `${infer T extends number}` ? T : never;
 ```
 
 You can [see more about this feature here](https://github.com/microsoft/TypeScript/pull/48094).
@@ -433,7 +448,7 @@ To reference a type from another module, you can instead directly qualify the im
 ```diff
 - import { someValue, SomeType } from "some-module";
 + import { someValue } from "some-module";
-  
+
   /**
 -  * @type {SomeType}
 +  * @type {import("some-module").SomeType}
