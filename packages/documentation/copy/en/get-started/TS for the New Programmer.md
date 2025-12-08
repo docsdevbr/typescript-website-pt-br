@@ -41,12 +41,12 @@ script simples para navegadores.
 Na época de sua criação, esperava-se que fosse usado para pequenos trechos de
 código incorporados em uma página web — escrever mais do que algumas dezenas de
 linhas de código seria algo incomum.
-Por isso, os primeiros navegadores da web executavam esse tipo de código muito
+Por isso, os primeiros navegadores web executavam esse tipo de código muito
 lentamente.
 Com o tempo, porém, o JS se tornou cada vez mais popular e as pessoas
 desenvolvedoras web começaram a usá-lo para criar experiências interativas.
 
-As pessoas desenvolvedoras de navegadores responderam a esse aumento no uso de
+As pessoas desenvolvedoras de navegadores responderam a esse aumento no uso do
 JS otimizando seus mecanismos de execução (compilação dinâmica) e ampliando o
 que podia ser feito com ele (adicionando APIs), o que, por sua vez, fez com que
 as pessoas desenvolvedoras web o utilizassem ainda mais.
@@ -56,8 +56,9 @@ Este é o crescimento longo e gradual da "web", começando como uma simples rede
 de páginas estáticas e evoluindo para uma plataforma para _aplicações_ ricas de
 todos os tipos.
 
-Além disso, o JS se tornou popular o suficiente para ser usado fora do contexto
-dos navegadores, como na implementação de servidores JS usando o Node.js.
+Mais que isso, o JS se tornou popular o suficiente para ser usado fora do
+contexto dos navegadores, como na implementação de servidores JS usando o
+Node.js.
 A natureza "executável em qualquer lugar" do JS o torna uma escolha atraente
 para o desenvolvimento multiplataforma.
 Há muitas pessoas desenvolvedoras hoje em dia que usam _apenas_ JavaScript para
@@ -94,7 +95,7 @@ A maioria das linguagens de programação lançaria um erro quando esse tipo de
 erro ocorresse; algumas o fariam durante a compilação — antes mesmo da execução
 do código.
 Ao escrever pequenos programas, essas peculiaridades são irritantes, mas
-administráveis; ao escrever aplicações com centenas ou milhares de linhas de
+gerenciáveis; ao escrever aplicações com centenas ou milhares de linhas de
 código, essas surpresas constantes representam um problema sério.
 
 ## TypeScript: um verificador de tipos estático
