@@ -14,40 +14,66 @@
 # The original work was translated from English into Brazilian Portuguese.
 # https://github.com/microsoft/TypeScript-Website/blob/-/LICENSE
 
-title: TypeScript for JavaScript Programmers
-short: TypeScript for JS Programmers
+source_url: https://github.com/microsoft/TypeScript-Website/blob/v2/packages/documentation/copy/en/get-started/TS%20for%20JS%20Programmers.md
+revision: 62bc6ab326f2ac28f2202c39b2b75914cf0a2628
+status: ready
+
+title: TypeScript para pessoas programadoras JavaScript
+short: TypeScript para pessoas programadoras JS
 layout: docs
 permalink: /docs/handbook/typescript-in-5-minutes.html
-oneline: Learn how TypeScript extends JavaScript
+oneline: Aprenda como o TypeScript estende o JavaScript.
 ---
 
-TypeScript stands in an unusual relationship to JavaScript. TypeScript offers all of JavaScript's features, and an additional layer on top of these: TypeScript's type system.
+O TypeScript tem uma relação peculiar com o JavaScript.
+O TypeScript oferece todos os recursos do JavaScript, além de uma camada
+adicional: o sistema de tipos do TypeScript.
 
-For example, JavaScript provides language primitives like `string` and `number`, but it doesn't check that you've consistently assigned these. TypeScript does.
+Por exemplo, o JavaScript fornece tipos primitivos como `string` e `number`, mas
+não verifica se você os atribuiu de forma consistente.
+O TypeScript verifica.
 
-This means that your existing working JavaScript code is also TypeScript code. The main benefit of TypeScript is that it can highlight unexpected behavior in your code, lowering the chance of bugs.
+Isso significa que seu código JavaScript que funciona também é código
+TypeScript.
+O principal benefício do TypeScript é que ele pode destacar comportamentos
+inesperados no seu código, reduzindo a probabilidade de erros.
 
-This tutorial provides a brief overview of TypeScript, focusing on its type system.
+Este tutorial oferece uma breve visão geral do TypeScript, com foco em seu
+sistema de tipos.
 
-## Types by Inference
+## Tipos por inferência
 
-TypeScript knows the JavaScript language and will generate types for you in many cases.
-For example in creating a variable and assigning it to a particular value, TypeScript will use the value as its type.
+O TypeScript conhece a linguagem JavaScript e, em muitos casos, gera tipos
+automaticamente.
+Por exemplo, ao criar uma variável e atribuir um valor específico a ela, o
+TypeScript usará o valor como seu tipo.
 
 ```ts twoslash
 let helloWorld = "Hello World";
 //  ^?
 ```
 
-By understanding how JavaScript works, TypeScript can build a type-system that accepts JavaScript code but has types. This offers a type-system without needing to add extra characters to make types explicit in your code. That's how TypeScript knows that `helloWorld` is a `string` in the above example.
+Ao entender como o JavaScript funciona, o TypeScript consegue construir um
+sistema de tipos que aceita código JavaScript, mas com tipos definidos.
+Isso oferece um sistema de tipos sem a necessidade de adicionar caracteres
+extras para explicitar os tipos no seu código.
+É assim que o TypeScript sabe que `helloWorld` é uma `string` no exemplo acima.
 
-You may have written JavaScript in Visual Studio Code, and had editor auto-completion. Visual Studio Code uses TypeScript under the hood to make it easier to work with JavaScript.
+Você pode ter escrito JavaScript no Visual Studio Code e usado o recurso de
+autocompletar do editor.
+O Visual Studio Code utiliza o TypeScript internamente para facilitar o trabalho
+com JavaScript.
 
-## Defining Types
+## Definindo tipos
 
-You can use a wide variety of design patterns in JavaScript. However, some design patterns make it difficult for types to be inferred automatically (for example, patterns that use dynamic programming). To cover these cases, TypeScript supports an extension of the JavaScript language, which offers places for you to tell TypeScript what the types should be.
+Você pode usar uma grande variedade de padrões de projeto em JavaScript.
+No entanto, alguns padrões de projeto dificultam a inferência automática de
+tipos (por exemplo, padrões que usam programação dinâmica).
+Para lidar com esses casos, o TypeScript oferece uma extensão da linguagem
+JavaScript que permite especificar os tipos que devem ser usados.
 
-For example, to create an object with an inferred type which includes `name: string` and `id: number`, you can write:
+Por exemplo, para criar um objeto com um tipo inferido que inclua `name: string`
+e `id: number`, você pode escrever:
 
 ```ts twoslash
 const user = {
@@ -56,7 +82,8 @@ const user = {
 };
 ```
 
-You can explicitly describe this object's shape using an `interface` declaration:
+Você pode descrever explicitamente a forma deste objeto usando uma declaração de
+`interface`:
 
 ```ts twoslash
 interface User {
@@ -65,7 +92,9 @@ interface User {
 }
 ```
 
-You can then declare that a JavaScript object conforms to the shape of your new `interface` by using syntax like `: TypeName` after a variable declaration:
+Em seguida, você pode declarar que um objeto JavaScript está em conformidade com
+a estrutura da sua nova `interface` usando uma sintaxe como `: NomeDoTipo` após
+a declaração de uma variável:
 
 ```ts twoslash
 interface User {
@@ -79,7 +108,8 @@ const user: User = {
 };
 ```
 
-If you provide an object that doesn't match the interface you have provided, TypeScript will warn you:
+Se você fornecer um objeto que não corresponda à interface especificada, o
+TypeScript exibirá um aviso:
 
 ```ts twoslash
 // @errors: 2322
@@ -94,7 +124,9 @@ const user: User = {
 };
 ```
 
-Since JavaScript supports classes and object-oriented programming, so does TypeScript. You can use an interface declaration with classes:
+Assim como o JavaScript suporta classes e programação orientada a objetos, o
+TypeScript também suporta.
+Você pode usar uma declaração de interface com classes:
 
 ```ts twoslash
 interface User {
@@ -115,7 +147,8 @@ class UserAccount {
 const user: User = new UserAccount("Murphy", 1);
 ```
 
-You can use interfaces to annotate parameters and return values to functions:
+Você pode usar interfaces para anotar parâmetros e valores de retorno de
+funções:
 
 ```ts twoslash
 // @noErrors
@@ -133,25 +166,42 @@ function getAdminUser(): User {
 }
 ```
 
-There is already a small set of primitive types available in JavaScript: `boolean`, `bigint`, `null`, `number`, `string`, `symbol`, and `undefined`, which you can use in an interface. TypeScript extends this list with a few more, such as `any` (allow anything), [`unknown`](/play#example/unknown-and-never) (ensure someone using this type declares what the type is), [`never`](/play#example/unknown-and-never) (it's not possible that this type could happen), and `void` (a function which returns `undefined` or has no return value).
+Já existe um pequeno conjunto de tipos primitivos disponíveis no JavaScript:
+`boolean`, `bigint`, `null`, `number`, `string`, `symbol` e `undefined`, que
+você pode usar em uma interface.
+O TypeScript estende essa lista com alguns outros, como `any` (permite qualquer
+coisa), [`unknown`](/play#example/unknown-and-never) (garante que quem usar esse
+tipo declare qual é o tipo), [`never`](/play#example/unknown-and-never) (é
+impossível que esse tipo ocorra) e `void` (uma função que retorna `undefined` ou
+não tem valor de retorno).
 
-You'll see that there are two syntaxes for building types: [Interfaces and Types](/play/?e=83#example/types-vs-interfaces). You should prefer `interface`. Use `type` when you need specific features.
+Você verá que existem duas sintaxes para construir tipos:
+[`interfaces` e `types`](/play/?e=83#example/types-vs-interfaces).
+Você deve preferir `interface`.
+Use `type` quando precisar de recursos específicos.
 
-## Composing Types
+## Compondo tipos
 
-With TypeScript, you can create complex types by combining simple ones. There are two popular ways to do so: unions and generics.
+Com TypeScript, você pode criar tipos complexos combinando tipos simples.
+Existem duas maneiras populares de fazer isso: uniões e genéricos.
 
-### Unions
+### Uniões
 
-With a union, you can declare that a type could be one of many types. For example, you can describe a `boolean` type as being either `true` or `false`:
+Com uma união, você pode declarar que um tipo pode ser um de vários tipos.
+Por exemplo, você pode descrever um tipo `boolean` como sendo `true` ou `false`:
 
 ```ts twoslash
 type MyBool = true | false;
 ```
 
-_Note:_ If you hover over `MyBool` above, you'll see that it is classed as `boolean`. That's a property of the Structural Type System. More on this below.
+_Nota:_ Se você passar o cursor sobre `MyBool` acima, verá que ele é
+classificado como `boolean`.
+Essa é uma propriedade do sistema de tipos estruturais.
+Mais detalhes abaixo.
 
-A popular use-case for union types is to describe the set of `string` or `number` [literals](/docs/handbook/2/everyday-types.html#literal-types) that a value is allowed to be:
+Um caso de uso popular para tipos de união é descrever o conjunto de
+[literais](/docs/handbook/2/everyday-types.html#literal-types) de `string` ou
+`number` que um valor pode assumir:
 
 ```ts twoslash
 type WindowStates = "open" | "closed" | "minimized";
@@ -159,7 +209,8 @@ type LockStates = "locked" | "unlocked";
 type PositiveOddNumbersUnderTen = 1 | 3 | 5 | 7 | 9;
 ```
 
-Unions provide a way to handle different types too. For example, you may have a function that takes an `array` or a `string`:
+As uniões também oferecem uma maneira de lidar com tipos diferentes.
+Por exemplo, você pode ter uma função que recebe um `array` ou uma `string`:
 
 ```ts twoslash
 function getLength(obj: string | string[]) {
@@ -167,9 +218,9 @@ function getLength(obj: string | string[]) {
 }
 ```
 
-To learn the type of a variable, use `typeof`:
+Para descobrir o tipo de uma variável, use `typeof`:
 
-| Type      | Predicate                          |
+| Tipo      | Predicado                          |
 | --------- | ---------------------------------- |
 | string    | `typeof s === "string"`            |
 | number    | `typeof n === "number"`            |
@@ -178,7 +229,8 @@ To learn the type of a variable, use `typeof`:
 | function  | `typeof f === "function"`          |
 | array     | `Array.isArray(a)`                 |
 
-For example, you can make a function return different values depending on whether it is passed a string or an array:
+Por exemplo, você pode fazer com que uma função retorne valores diferentes
+dependendo se ela recebe uma string ou um array:
 
 <!-- prettier-ignore -->
 ```ts twoslash
@@ -191,9 +243,12 @@ function wrapInArray(obj: string | string[]) {
 }
 ```
 
-### Generics
+### Genéricos
 
-Generics provide variables to types. A common example is an array. An array without generics could contain anything. An array with generics can describe the values that the array contains.
+Os genéricos fornecem variáveis ​​para tipos.
+Um exemplo comum é um array.
+Um array sem genéricos poderia conter qualquer coisa.
+Um array com genéricos pode descrever os valores que o array contém.
 
 ```ts
 type StringArray = Array<string>;
@@ -201,7 +256,7 @@ type NumberArray = Array<number>;
 type ObjectWithNameArray = Array<{ name: string }>;
 ```
 
-You can declare your own types that use generics:
+Você pode declarar seus próprios tipos que utilizam genéricos:
 
 ```ts twoslash
 // @errors: 2345
@@ -210,22 +265,27 @@ interface Backpack<Type> {
   get: () => Type;
 }
 
-// This line is a shortcut to tell TypeScript there is a
-// constant called `backpack`, and to not worry about where it came from.
+// Esta linha é um atalho para dizer ao TypeScript que existe uma constante
+// chamada `backpack`, e para não se preocupar com a sua origem.
 declare const backpack: Backpack<string>;
 
-// object is a string, because we declared it above as the variable part of Backpack.
+// object é uma string, porque o declaramos acima como parte da variável
+// Backpack.
 const object = backpack.get();
 
-// Since the backpack variable is a string, you can't pass a number to the add function.
+// Como a variável backpack é uma string, você não pode passar um número para a
+// função add.
 backpack.add(23);
 ```
 
-## Structural Type System
+## Sistema de tipos estruturais
 
-One of TypeScript's core principles is that type checking focuses on the _shape_ that values have. This is sometimes called "duck typing" or "structural typing".
+Um dos princípios fundamentais do TypeScript é que a verificação de tipos se
+concentra na _forma_ que os valores possuem.
+Isso às vezes é chamado de "tipagem dinâmica" ou "tipagem estrutural".
 
-In a structural type system, if two objects have the same shape, they are considered to be of the same type.
+Em um sistema de tipos estruturais, se dois objetos têm a mesma forma, eles são
+considerados do mesmo tipo.
 
 ```ts twoslash
 interface Point {
@@ -237,14 +297,18 @@ function logPoint(p: Point) {
   console.log(`${p.x}, ${p.y}`);
 }
 
-// logs "12, 26"
+// loga "12, 26"
 const point = { x: 12, y: 26 };
 logPoint(point);
 ```
 
-The `point` variable is never declared to be a `Point` type. However, TypeScript compares the shape of `point` to the shape of `Point` in the type-check. They have the same shape, so the code passes.
+A variável `point` nunca é declarada como sendo do tipo `Point`.
+No entanto, o TypeScript compara a forma de `point` com a forma de `Point` na
+verificação de tipos.
+Elas têm a mesma forma, então o código é aprovado.
 
-The shape-matching only requires a subset of the object's fields to match.
+A correspondência de forma exige apenas que um subconjunto dos campos do objeto
+corresponda.
 
 ```ts twoslash
 // @errors: 2345
@@ -258,16 +322,16 @@ function logPoint(p: Point) {
 }
 // ---cut---
 const point3 = { x: 12, y: 26, z: 89 };
-logPoint(point3); // logs "12, 26"
+logPoint(point3); // loga "12, 26"
 
 const rect = { x: 33, y: 3, width: 30, height: 80 };
-logPoint(rect); // logs "33, 3"
+logPoint(rect); // loga "33, 3"
 
 const color = { hex: "#187ABF" };
 logPoint(color);
 ```
 
-There is no difference between how classes and objects conform to shapes:
+Não há diferença entre como classes e objetos obedecem a formas:
 
 ```ts twoslash
 // @errors: 2345
@@ -291,14 +355,17 @@ class VirtualPoint {
 }
 
 const newVPoint = new VirtualPoint(13, 56);
-logPoint(newVPoint); // logs "13, 56"
+logPoint(newVPoint); // loga "13, 56"
 ```
 
-If the object or class has all the required properties, TypeScript will say they match, regardless of the implementation details.
+Se o objeto ou classe tiver todas as propriedades necessárias, o TypeScript dirá
+que elas correspondem, independentemente dos detalhes de implementação.
 
-## Next Steps
+## Próximos passos
 
-This was a brief overview of the syntax and tools used in everyday TypeScript. From here, you can:
+Esta foi uma breve visão geral da sintaxe e das ferramentas usadas no TypeScript
+no dia a dia.
+A partir daqui, você pode:
 
-- Read the full Handbook [from start to finish](/docs/handbook/intro.html)
-- Explore the [Playground examples](/play#show-examples)
+- Ler o manual completo [do início ao fim](/docs/handbook/intro.html)
+- Explorar os [exemplos do Playground](/play#show-examples)
